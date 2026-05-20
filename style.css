@@ -1,0 +1,150 @@
+/* StarStar 법적 고지 — 단순/가독성 우선 */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #F5F4F9;
+  --surface: #FFFFFF;
+  --ink: #1B1B23;
+  --ink-mid: #6E6E7A;
+  --ink-low: #A0A0AD;
+  --line: #E4E3EC;
+  --amber: #FF9F3E;
+  --amber-soft: rgba(255,159,62,0.10);
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Apple SD Gothic Neo",
+    "Malgun Gothic", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+body { padding: 24px 16px 64px; }
+
+.wrap {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* 홈 (index) — 로고 + 두 카드 */
+.hero {
+  text-align: center;
+  padding: 32px 0 24px;
+}
+.hero img {
+  display: block;
+  margin: 0 auto 12px;
+  border-radius: 22%;
+}
+.hero h1 {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+.hero .tagline {
+  margin-top: 4px;
+  color: var(--ink-mid);
+  font-size: 14px;
+}
+
+.menu {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+}
+.card {
+  display: block;
+  padding: 20px 22px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  text-decoration: none;
+  color: var(--ink);
+  transition: border-color .15s, transform .15s;
+}
+.card:hover {
+  border-color: var(--amber);
+  transform: translateY(-1px);
+}
+.card h2 {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.card p {
+  font-size: 14px;
+  color: var(--ink-mid);
+}
+
+/* 문서 (terms/privacy) */
+.doc .back {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: var(--ink-mid);
+  text-decoration: none;
+  font-size: 14px;
+}
+.doc .back:hover { color: var(--amber); }
+
+.doc header {
+  text-align: center;
+  padding: 16px 0 28px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 28px;
+}
+.doc header img {
+  display: block;
+  margin: 0 auto 10px;
+  border-radius: 22%;
+}
+.doc header h1 {
+  font-size: 22px;
+  font-weight: 800;
+}
+.doc header .updated {
+  margin-top: 4px;
+  color: var(--ink-low);
+  font-size: 13px;
+}
+
+.doc section { margin-bottom: 24px; }
+.doc section h2 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--amber);
+}
+.doc section p {
+  color: var(--ink);
+  font-size: 15px;
+}
+
+.foot {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  text-align: center;
+  color: var(--ink-mid);
+  font-size: 13px;
+}
+.foot a { color: var(--amber); text-decoration: none; }
+.foot a:hover { text-decoration: underline; }
+.foot .small {
+  margin-top: 6px;
+  color: var(--ink-low);
+  font-size: 12px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0A0A12;
+    --surface: #15151E;
+    --ink: #FFFFFF;
+    --ink-mid: #9D9DAA;
+    --ink-low: #7A7A88;
+    --line: #272731;
+  }
+}
